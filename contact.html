@@ -37,6 +37,8 @@
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
+  <p id="message">Hi This is post message send</p>
+
   <div class="site-wrap">
 
     <div class="site-mobile-menu site-navbar-target">
@@ -222,9 +224,10 @@
 
   <script>
    window.addEventListener('message',function(e){
+     alert("rajini");
+     document.getElementById('message').innerHTML = "Message changed.";
      console.log("rajini message recieved");
    })
-  
   </script>
 
 </body>
