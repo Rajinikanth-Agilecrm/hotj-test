@@ -223,11 +223,18 @@
   <script src="js/main.js"></script>
 
   <script>
-   window.addEventListener('message',function(e){
-     alert("rajini");
-     document.getElementById('message').innerHTML = "Message changed.";
-     console.log("rajini message recieved");
-   })
+  
+ if (window.addEventListener) {
+    	window.addEventListener("message", displayMessage, false);
+ }
+ else {
+	window.attachEvent("onmessage", displayMessage);
+ }
+
+ function displayMessage(){
+   alert("rajinikanth");
+   document.getElementById('message').innerHTML = "Message changed.";
+ }
   </script>
 
 </body>
