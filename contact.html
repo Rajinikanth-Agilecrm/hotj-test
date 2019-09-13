@@ -226,14 +226,14 @@
   <script>
   
  if (window.addEventListener) {
-    	window.addEventListener("message", displayMessage, false);
+    	window.addEventListener("message", displayMessage(), false);
  }
  else {
-	window.attachEvent("onmessage", displayMessage);
+	window.attachEvent("onmessage", displayMessage());
  }
 
- function displayMessage(event){
-  new UserTrackerPlay().playAll(event.data.session_id,event.data.page_url);
+ function displayMessage(){
+  //new UserTrackerPlay().playAll(event.data.session_id,event.data.page_url);
   alert("play event called");
  }
 
