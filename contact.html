@@ -239,14 +239,15 @@
 
  
  if (window.addEventListener) {
-    	window.addEventListener("message", test(e), false);
+    	window.addEventListener("message", test, false);
  }
  else {
-	window.attachEvent("onmessage", test(e));
+	window.attachEvent("onmessage", test);
  }
- function test(e){
-  alert(e);
-  console.log(e);
+ function test(event){
+  alert("In test message");
+  alert(event);
+  console.log(event);
  }
 
   </script>
