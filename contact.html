@@ -225,20 +225,29 @@
 
   <script>
   
- if (window.addEventListener) {
-    	window.addEventListener("message", displayMessage, false);
+ /*if (window.addEventListener) {
+    	window.addEventListener("message", displayMessage(), false);
  }
  else {
-	window.attachEvent("onmessage", displayMessage);
+	window.attachEvent("onmessage", displayMessage());
  }
 
  function displayMessage(){
-  // alert("rajinikanth");
-  // document.getElementById('message').innerHTML = "Message changed kvs .";
-  // document.getElementById('fname1111').value="rajinkaknth";
   new UserTrackerPlay().playAll('rr','ggg');
   alert("play event called");
+ }*/
+
+ 
+ if (window.addEventListener) {
+    	window.addEventListener("message", test(e), false);
  }
+ else {
+	window.attachEvent("onmessage", test(e));
+ }
+ function test(e){
+  console.log(e);
+ }
+
   </script>
 
 </body>
