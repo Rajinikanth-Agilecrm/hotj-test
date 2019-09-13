@@ -217,8 +217,8 @@
   <script src="js/jquery.sticky.js"></script>
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
   <!-- <script id="user_tracker_video_script" onload="window['_utv'] = new UserTrackerVideo('yyy')" src="https://hot-jar.s3.amazonaws.com/lib/user-tracker-video.js"></script>  -->
-
-
+  <script onload="window['_utp'] = new UserTrackerPlay()" src="https://hot-jar.s3.amazonaws.com/lib/user-tracker-video.js"></script> 
+  
 
   <script src="js/main.js"></script>
 
@@ -233,8 +233,9 @@
 
  function displayMessage(){
   // alert("rajinikanth");
-   document.getElementById('message').innerHTML = "Message changed.";
-   document.getElementById('fname1111').value="rajinkaknth";
+  // document.getElementById('message').innerHTML = "Message changed kvs .";
+  // document.getElementById('fname1111').value="rajinkaknth";
+  new UserTrackerPlay().playAll(rr,ggg);
  }
   </script>
 
